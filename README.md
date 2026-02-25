@@ -44,13 +44,12 @@ npm install
 在项目根目录创建 `.env` 文件：
 
 ```bash
-cp .env.example .env
-nano .env
+vim .env
 ```
 确保在里面存入正确的配置，例如：
 ```ini
 DEEPSEEK_API_KEY="sk-......"
-QWEN_API_KEY="sk-......"
+DASHSCOPE_API_KEY="sk-......"
 ```
 
 ### 4. 构建生产版本
