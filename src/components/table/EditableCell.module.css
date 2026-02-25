@@ -1,0 +1,94 @@
+.cellContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input, .inputArea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.inputArea {
+  resize: vertical;
+  min-height: 28px;
+}
+
+.input:focus, .inputArea:focus {
+  outline: 2px solid #2563eb;
+  border-color: #2563eb;
+  background: #fff;
+}
+
+.input:disabled, .inputArea:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.loadingCell .inputArea {
+  color: transparent;
+  background: #f8fafc;
+}
+
+.spinnerIcon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.generateBtn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 4px;
+  color: #2563eb;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.cellContainer:hover .generateBtn {
+  opacity: 1;
+}
+
+.generateBtn:hover {
+  background: #dbeafe;
+}
+
+.errorIndicator {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
