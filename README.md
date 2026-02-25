@@ -41,11 +41,11 @@ npm install
 
 ### 3. 配置环境变量
 如果你需要用到 AI 智能列，请务必准备好各家大模型的 API Key。
-在项目根目录创建 `.env.local` 文件：
+在项目根目录创建 `.env` 文件：
 
 ```bash
-cp .env.example .env.local
-nano .env.local
+cp .env.example .env
+nano .env
 ```
 确保在里面存入正确的配置，例如：
 ```ini
