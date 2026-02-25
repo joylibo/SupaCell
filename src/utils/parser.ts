@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import * as XLSX from 'xlsx';
+import * as XLSX from 'xlsx-js-style';
 // @ts-ignore
 import readXlsxFile from 'read-excel-file/browser';
 import { v4 as uuidv4 } from 'uuid';
