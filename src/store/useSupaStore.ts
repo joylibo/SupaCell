@@ -51,7 +51,7 @@ interface SupaStoreState {
 interface SupaStoreActions {
   // Column actions
   setColumns: (columns: ColumnDef[]) => void;
-  addColumn: (column: Omit<ColumnDef, 'id'>) => void;
+  addColumn: (column: Omit<ColumnDef, 'id'> & { id?: string }) => void;
   updateColumn: (id: string, column: Partial<ColumnDef>) => void;
   removeColumn: (id: string) => void;
 
@@ -110,7 +110,7 @@ export const useSupaStore = create<SupaStore>((set) => ({
 
   setColumns: (columns) => set({ columns }),
   addColumn: (colInfo) => set((state) => ({
-    columns: [...state.columns, { ...colInfo, id: uuidv4() }]
+    columns: [...state.columns, { id: uuidv4(), ...colInfo }]
   })),
   updateColumn: (id, updates) => set((state) => ({
     columns: state.columns.map(c => c.id === id ? { ...c, ...updates } : c)
